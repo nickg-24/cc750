@@ -1,6 +1,6 @@
 import json
 import subprocess
-import encode as util
+from dockerChannel.sender.encode import encode_msg
 
 # load accounts and transmission log
 with open("accounts.json", "r") as file:
@@ -17,7 +17,7 @@ message = input("Enter your secret message: ")
 image_name = input("Enter the Docker image name: ")
 
 # encode the message, directly modifies the etc/crontabs/root file
-util.encode(message, selected_account["username"], image_name)
+encode_msg(message, selected_account["username"], image_name)
 
 # login as one of the unused accounts
 subprocess.run(["docker", "login", "-u", selected_account["username"], "--password-stdin"], input=selected_account["password"], text=True)
