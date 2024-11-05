@@ -11,6 +11,7 @@ with open("transmission_log.json", "r") as log_file:
 
 # pick unused account
 selected_account = next(acc for acc in accounts if acc["username"] not in [entry["username"] for entry in used_accounts])
+print(f'Selected Account: {selected_account["username"]}')
 
 # ask for message and image name (for the first time, this should be agreed upon with the receiver)
 message = input("Enter your secret message: ")
@@ -20,13 +21,23 @@ image_name = input("Enter the Docker image name: ")
 encode_msg(message, selected_account["username"], image_name)
 
 # login as one of the unused accounts
-subprocess.run(["docker", "login", "-u", selected_account["username"], "--password-stdin"], input=selected_account["password"], text=True)
+try:
+    subprocess.run(["docker", "login", "-u", selected_account["username"], "--password-stdin"], input=selected_account["password"], text=True)
+except:
+    print("Login failed. Exiting...")  
+    exit() 
+
 
 # build and push image, specifying dockerfile location
 dockerfile_path = "getting-started-app/Dockerfile"
 build_context = "getting-started-app"
-subprocess.run(["docker", "build", "-t", image_name, "-f", dockerfile_path, build_context])
-subprocess.run(["docker", "push", image_name])
+
+try:
+    subprocess.run(["docker", "build", "-t", image_name, "-f", dockerfile_path, build_context])
+    subprocess.run(["docker", "push", image_name])
+except:
+    print("Image push failed. Exiting...")
+    exit()
 
 # update transmission log
 used_accounts.append({"username": selected_account["username"], "email": selected_account["email"]})
