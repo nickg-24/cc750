@@ -25,7 +25,7 @@ def encode_msg(msg, usr, img_name):
     for i in range(num_lines):
         initial_lines.append("*\t*\t*\t*\t*\trun-parts /etc/periodic/job" + str(i) + "\n")
 
-    with open('./etc/crontabs/root', 'w') as file:
+    with open('./getting-started-app/etc/crontabs/root', 'w') as file:
         file.writelines(initial_lines)
         file.close()
 
@@ -108,7 +108,7 @@ def encode_msg(msg, usr, img_name):
     columns = [col_1, col_2, col_3, col_4, col_5]
 
     lines = []
-    with open('./etc/crontabs/root', 'r') as file:
+    with open('./getting-started-app/etc/crontabs/root', 'r') as file:
         for i, line in enumerate(file):
             if i > 1:
                 line = line.split('\t')
@@ -122,6 +122,6 @@ def encode_msg(msg, usr, img_name):
                 lines.append(line)
         file.close()
 
-    with open('./etc/crontabs/root', 'w') as file:
+    with open('./getting-started-app/etc/crontabs/root', 'w') as file:
         file.writelines(lines)
         file.close()
