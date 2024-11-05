@@ -4,9 +4,9 @@ import math
 def encode_msg(msg, usr, img_name):
 
     # Convert each character in the message to its binary representation
-    bin_msg = "".join(format(ord(x), f'0b') for x in msg)
-    bin_usr = "".join(format(ord(x), f'0b') for x in usr)
-    bin_img_name = "".join(format(ord(x), f'0b') for x in img_name)
+    bin_msg = "".join(format(ord(x), f'0{7}b') for x in msg)
+    bin_usr = "".join(format(ord(x), f'0{7}b') for x in usr)
+    bin_img_name = "".join(format(ord(x), f'0{7}b') for x in img_name)
 
     while len(bin_msg) % 18 != 0:
         bin_msg += '0'
