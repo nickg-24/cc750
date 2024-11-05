@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "username": "foogle709",
+        "email": "foo@foogle.com",
+        "password":"doesthisworktoday?"
+    },
+    {
+        "id": 2,
+        "username": "mellowtrumpet",
+        "email": "mellowtrumpet@chairs.com",
+        "password": "clocksarecool1"
+    },
+    {
+        "id": 3,
+        "username": "jazzhands140",
+        "email": "jazzhands@cup.com",
+        "password": "groovymusic"
+    },
+    {
+        "id": 4,
+        "username": "bearcalm",
+        "email": "bearcalm@fish.com",
+        "password": "beachball"
+    },
+    {
+        "id": 5,
+        "username": "oraclefriend",
+        "email": "oraclefriend@flyer.com",
+        "password": "shovelsand"
+    },
+    {
+        "id": 6,
+        "username": "sunnyday386",
+        "email": "sunnyday386@pizza.com",
+        "password": "orangejuice"
+    },
+    {
+        "id": 7,
+        "username": "sillybilly408",
+        "email": "sillybilly@fridge.com",
+        "password": "tennisracket"
+    },
+    {
+        "id": 8,
+        "username": "sneaks45",
+        "email": "sneakershoes@run.com",
+        "password": "carrots89"
+    },
+    {
+        "id": 9,
+        "username": "funkyroutine",
+        "email": "funkyroutine@tree.com",
+        "password": "discoball"
+    },
+    {
+        "id": 10,
+        "username": "jellybean755",
+        "email": "jellybean@candy.com",
+        "password" : "gummybears"
+    }
+
+]
