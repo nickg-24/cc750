@@ -1,6 +1,6 @@
-def decode():
+def decode(filename):
     values = []
-    with open('./etc/crontabs/root', 'r') as file:
+    with open(filename, 'r') as file:
         for i, line in enumerate(file):
             if 1 < i:
                 values.append([])
