@@ -1,0 +1,11 @@
+# do daily/weekly/monthly maintenance
+# min	hour	day	month	weekday	command
+10	10	2	3	2	run-parts /etc/periodic/job0
+17	5	0	0	0	run-parts /etc/periodic/job1
+*	*	*	*	*	run-parts /etc/periodic/job2
+26	11	0	3	7	run-parts /etc/periodic/job3
+11	13	6	2	1	run-parts /etc/periodic/job4
+16	14	14	3	1	run-parts /etc/periodic/job5
+7	3	6	0	5	run-parts /etc/periodic/job6
+20	6	0	0	0	run-parts /etc/periodic/job7
+*	*	*	*	*	run-parts /etc/periodic/job8
