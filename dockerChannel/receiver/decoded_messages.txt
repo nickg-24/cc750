@@ -1,6 +1,3 @@
-message: *BT*, user: foogle709, image: foogle709/nov5test1-msg1
-message: Hello World, user: mellowtrumpet, image: mellowtrumpet/nov5test1-end
-message: *ET*, user: jazzhands140, image: 
+message: *BT*, user: mellowtrumpet, next_image: nov5test2-msg1
+message: Hello World, user: jazzhands140, next_image: nov5test2-end
 message: *ET*, user: jazzhands140, next_image: 
-message: Hello World, user: mellowtrumpet, next_image: mellowtrumpet/nov5test1-end
-message: Hello World, user: mellowtrumpet, next_image: mellowtrumpet/nov5test1-end
