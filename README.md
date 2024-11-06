@@ -9,6 +9,7 @@ Code for dockerhub covert channel.
 - [ ] Think about randomizing the file that encodes the data
 - [ ] automating the reciever at least
 - [ ] figuring out polling timing
+- [ ] check to make sure that the react app still works for generated images
 
 
 See [Google Drive](https://drive.google.com/drive/u/1/folders/0AN4LDkZ6pJVnUk9PVA) for Other Files 
