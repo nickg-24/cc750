@@ -1,3 +1,0 @@
-message: *BT*, user: mellowtrumpet, next_image: nov5test2-msg1
-message: Hello World, user: jazzhands140, next_image: nov5test2-end
-message: *ET*, user: jazzhands140, next_image: 
