@@ -31,7 +31,7 @@ The `sender_orchestrator.py` script facilitates sending encoded messages covertl
 3. **Input Message & Image**: Prompts the user to enter the Docker image name and the secret message.
 4. **Set Image Location**: Constructs the DockerHub repository location for the image (`username/image_name`).
 5. **Encode Message**:
-    - If the message is "*ET*", it encodes it as the end of the transmission.
+    - If the message is `*ET*`, it encodes it as the end of the transmission.
     - Otherwise, it assigns a next-hop Docker image for continued transmission and encodes the message with `encode_msg`.
 6. **Log in and Publish**: Logs into DockerHub using the selected account, builds, and pushes the Docker image.
 7. **Log Transmission**: Updates `transmission_log.json` to record the selected account for future transmissions.
