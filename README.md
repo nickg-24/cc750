@@ -10,7 +10,7 @@ Our complete paper can be found [here](Final_Paper.pdf).
 
 ## Encoding/Decoding
 
-**Note:** WWe chose to use the subtle differences between the Node Alpine and Node Bookworm images (specifically, the presence of the crontabs/root file) to obfuscate our messages however a wide variety of methods could be used.
+**Note:** We chose to use the subtle differences between the Node Alpine and Node Bookworm images (specifically, the presence of the crontabs/root file) to obfuscate our messages however a wide variety of methods could be used.
 
 {STUFF ABOUT HOW ENCODING/DECODING WORKS}
 
@@ -50,7 +50,7 @@ The script will prompt the user to enter the Docker image name and the secret me
 ## Receiver Orchestrator
 
 ### Overview
-The `receiver_orchestrator.py` script continuously monitors DockerHub for images that contain encoded messages. It polls the DockerHub API at specified intervals to detect new images, pulls them, and decodes the embedded message until an "*ET*" (end transmission) flag is received.
+The `receiver_orchestrator.py` script continuously monitors DockerHub for images that contain encoded messages. It polls the DockerHub API at specified intervals to detect new images, pulls them, and decodes the embedded message until an `*ET*` (end transmission) flag is received.
 
 ### Prerequisites:
 - Docker configured to run on your system
@@ -64,7 +64,7 @@ The `receiver_orchestrator.py` script continuously monitors DockerHub for images
     - Calls `process_repository` to check if the current repository has a new Docker image.
     - Pulls and decodes the image if available.
     - Logs the decoded message and updates the repository name if a next-hop is provided.
-    - Stops if it detects the "*ET*" flag.
+    - Stops if it detects the `*ET*` flag.
 3. **Decoding Messages**:
     - Uses `decode_msg` to extract the secret message, next user, and next image.
     - Logs each decoded message to the specified log file.
