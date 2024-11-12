@@ -22,7 +22,7 @@ Our complete paper can be found [here](Final_Paper.pdf).
 The `sender_orchestrator.py` script facilitates sending encoded messages covertly by embedding them in Docker images published to DockerHub. It selects DockerHub accounts for image publishing from a predefined list and logs transmission details to prevent reuse of accounts.
 
 ### Prerequisites:
-- A transmission sequence for this channel starts with the `*BT*` flag and ends with the `*ET*` flag. Valid DockerHub account details should be stored in accounts.json. With n DockerHub accounts, you can send up to n-2 content messages, as two accounts are reserved for the `*BT*` and `*ET*` flags.
+- A transmission sequence for this channel starts with the `*BT*` flag and ends with the `*ET*` flag. Valid DockerHub account details should be stored in accounts.json. With `n` DockerHub accounts, you can send up to `n-2` content messages, as two accounts are reserved for the `*BT*` and `*ET*` flags.
 - Docker configured to run on your system
 
 ### Workflow Steps
