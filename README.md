@@ -37,8 +37,8 @@ The `sender_orchestrator.py` script facilitates sending encoded messages covertl
 7. **Log Transmission**: Updates `transmission_log.json` to record the selected account for future transmissions.
 
 ### Files
-- `**accounts.json**`: Contains DockerHub account details.
-- `**transmission_log.json**`: Maintains a log of used accounts.
+- `accounts.json`: Contains DockerHub account details.
+- `transmission_log.json`: Maintains a log of used accounts.
 
 ### Example Usage
 ```bash
@@ -74,8 +74,8 @@ The `receiver_orchestrator.py` script continuously monitors DockerHub for images
     - The `get_polling_interval` function can be modified for custom timing patterns.
 
 ### Files
-- `**root_file**`: Temporarily stores the extracted `/etc/crontabs/root` file from each pulled Docker image.
-- `**decode.py**`: Handles decoding of messages from the extracted root file.
+- `root_file`: Temporarily stores the extracted `/etc/crontabs/root` file from each pulled Docker image.
+- `decode.py`: Handles decoding of messages from the extracted root file.
 
 ### Example Usage
 ```bash
