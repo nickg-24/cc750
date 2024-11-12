@@ -22,7 +22,7 @@ Our complete paper can be found [here](Final_Paper.pdf).
 The `sender_orchestrator.py` script facilitates sending encoded messages covertly by embedding them in Docker images published to DockerHub. It selects DockerHub accounts for image publishing from a predefined list and logs transmission details to prevent reuse of accounts.
 
 ### Prerequisites:
-- Valid DockerHub account details to be stored in `accounts.json`. If you have `n` DockerHub accounts, you can send `n-2` messages containing content (to account for the `*BT*` and `*ET*` flags)
+- A transmission sequence for this channel starts with the `*BT*` flag and ends with the `*ET*` flag. Valid DockerHub account details should be stored in accounts.json. With n DockerHub accounts, you can send up to n-2 content messages, as two accounts are reserved for the `*BT*` and `*ET*` flags.
 - Docker configured to run on your system
 
 ### Workflow Steps
@@ -83,3 +83,11 @@ python receiver_orchestrator.py <repo_name> <log_file_path>
 ```
 - `<repo_name>`: Initial DockerHub repository to start polling from, formatted as username/image_name.
 - `<log_file_path>`: File path where decoded messages are logged.
+
+Below is an example of what the log file for a transmission sequence might look like.
+
+```
+message: *BT*, user: mellowtrumpet, next_image: nov12test1-msg1
+message: Hello World, user: jazzhands140, next_image: nov12test1-end
+message: *ET*, user: jazzhands140, next_image: 
+```
