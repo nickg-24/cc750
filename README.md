@@ -12,9 +12,20 @@ Our complete paper can be found [here](Final_Paper.pdf).
 
 **Note:** We chose to use the subtle differences between the Node Alpine and Node Bookworm images (specifically, the presence of the crontabs/root file) to obfuscate our messages however a wide variety of methods could be used.
 
-{STUFF ABOUT HOW ENCODING/DECODING WORKS}
+### Encoding:
+The information being encoded includes the message to be transmitted, the username of the user publishing the image, and the name of the image containing the next part of the message.
+The steps for encoding this information into the crontabs/root file are as follows:
+1. Based on the number of characters in each component (message, username, image name), calculate the number of lines needed to store that information.
+   1. Using ASCII encoding every character is represented by 7 bits, and due to the allowed ranges of time values for every column each line can hold 18 bits.
+2. Convert every character to its binary representation, and concat them together to get binary strings for each transmission component.
+3. These binary strings are split according to the allowed sizes for each column of the crontabs file, and converted into an integer value.
+4. Those integer values are written to every column of the crontabs file, with a line of all `"*"` characters used to separate the different components of the transmission. 
 
-
+### Decoding:
+Decoding the transmission components follows the same steps as encoding, except in reverse order.
+1. Convert every integer in each column of the crontabs file to its binary representation.
+2. Concat those binary strings together into the larger binary string for each transmission component.
+3. Split those strings into chunks of 7 bits to be able to convert them back into the ASCII character, which yields the original transmission components.
 
 ## Sender Orchestrator
 
