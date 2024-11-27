@@ -5,7 +5,7 @@ This channel requires the following shared secrets to be established through a s
 - Understanding of the methodology and workflow
 - Location of the initial image on DockerHub
 
-Our complete paper can be found [here](Final_Paper.pdf).
+Our complete paper can be found [here](CC_Through_Docker_Image_Manipulation.pdf).
 <!-- It can also be found HERE. (on the slim chance that it gets published)  -->
 
 ## Encoding/Decoding
