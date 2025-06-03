@@ -7,6 +7,7 @@ This channel requires the following shared secrets to be established through a s
 
 Our complete paper can be found [here](CC_Through_Docker_Image_Manipulation.pdf).
 <!-- It can also be found HERE. (on the slim chance that it gets published)  -->
+This paper was published in the 2025 13th International Symposium on Digital Forensics and Security (ISDFS) and can be found on (IEEE Xplore)[https://ieeexplore.ieee.org/document/11012069]
 
 ## Encoding/Decoding
 
